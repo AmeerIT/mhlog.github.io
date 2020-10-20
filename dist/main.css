@@ -14,7 +14,10 @@
   transition: all 0.25s ease-in-out;
   font-family: "Markazi Text", serif;
   font-family: "Tajawal", sans-serif;
+  font-size: clamp(2rem, 1rem);
   font-size: 17px;
+  overflow: scroll;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   -ms-overflow-style: none;
   /* Internet Explorer 10+ */
@@ -105,10 +108,11 @@ h1 {
 .menu {
   z-index: 2;
   right: 0;
-  overflow-y: scroll;
   position: fixed;
+  bottom: 0;
   box-sizing: content-box;
   /* So the width will be 100% + 17px */
+  overflow: hidden;
   transition: all 0.25s ease-in-out;
   padding-top: 5rem;
 }
@@ -143,7 +147,7 @@ h1 {
   height: 100vh;
   scroll-margin: inherit;
   color: var(--main-font-color);
-  width: min(70%, 750px);
+  width: max(70%, 750px);
   -ms-overflow-style: none;
   /* Internet Explorer 10+ */
   scrollbar-width: none;
