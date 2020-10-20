@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;500;600;700&family=Tajawal:wght@400;700&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/main.css">
+    <title>مسار الهدى</title>
+    <link rel="shortcut icon" href="resources/favicon.ico" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        // Select all links with hashes
+        $('a[href*="#"]')
+            // Remove links that don't actually link to anything
+            .not('[href="#"]')
+            .not('[href="#0"]')
+            .click(function (event) {
+                // On-page links
+                if (
+                    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                    &&
+                    location.hostname == this.hostname
+                ) {
+                    // Figure out element to scroll to
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    // Does a scroll target exist?
+                    if (target.length) {
+                        // Only prevent default if animation is actually gonna happen
+                        event.preventDefault();
+                        $('html, body, .content').animate({
+                            scrollTop: target.offset().top
+                        }, 1000, function () {
+                            // Callback after animation
+                            // Must change focus!
+                            var $target = $(target);
+                            $target.focus();
+                            if ($target.is(":focus")) { // Checking if the target was focused
+                                return false;
+                            } else {
+                                $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                                $target.focus(); // Set focus again
+                            };
+                        });
+                    }
+                }
+            });
+    </script>
+</head>
+
+<body>
+    <div class="menutitle">
+        <img src="resources/logo2 250.png" alt="">
+        <h1>
+            شركة مسار الهدى
+        </h1>
+    </div>
+    <div class="menu">
+        <ul class="menu-context">
+            <li class="menu-item">
+                <a href="#aboutus">
+                    حول الشركة
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#services">
+                    خدماتنا
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#locations">
+                    عناوين الشركة
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#contactus">
+                    تواصل معنا
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="banner">
+        <img src="resources/banner.jpg" alt="مسار الهدى">
+    </div>
+    <div class="content">
+        <div class="aboutus">
+            <h2 id="about">
+                <a name="aboutus">
+                    حول الشركة
+                </a>
+            </h2>
+            <p>
+                تختص شركة مسار الهدى بالتخليص الكمركي من كافة المنافذ الحدوديه الجويه و البريه و البحريه بالاضافه الى
+                النقل
+                الجوي من
+                كافة انحاء العالم
+            </p>
+            <p>
+                يمكنكم التواصل معنا من خلال البريد الالكتروني او ارقام الهواتف المتاحه
+            </p>
+            <p>
+                او زيارة مكتبنا الرئيسي في المنصور شارع الداوودي
+            </p>
+            <p>
+                او مكتبنا في قرية الشحن الجوي في مطار بغداد الدولي
+            </p>
+        </div>
+        <div class="services">
+            <h2 id="services">
+                <a name="services">
+                    خدماتنا
+                </a>
+            </h2>
+            <p>
+                تشمل خدمات شركة مسار الهدى التخليص الكمركي من كافة المنافذ الحدوديه الجويه او البحريه او البريه اضافة
+                الى الشحن الجوي الى كافة انحاء العالم
+            </p>
+            <h3>خدمة التخليص الكمركي</h3>
+            <p class="logisticsdescription">
+                من خلال التعامل مع مكاتب شركة مسار الهدى تستطيع تسهيل وتسريع اجراءات التخليص الكمركي بكل سهولة و شفافيه
+                في التعامل
+            </p>
+            <h3>خدمة الشحن الجوي</h3>
+            خدمة الشحن الجوي تمكنك من ارسال و استقبال الطرود من و الى كافة انحاء العالم
+        </div>
+        <div class="locations">
+            <h2 id="locations">
+                <a name="locations">
+                    مكاتب الشركة
+                </a>
+            </h2>
+            يمكنكم زيارة مكتبنا الرئيسي في شارع الداوودي في المنصور
+            من خلال العنوان التالي
+            <div class="locationdetails">
+                <p>
+                    المكتب الرئيسي
+                </p>
+                <br>
+                <ul class="address">
+                    <li>المنصور شارع الداوودي
+                        محله 611
+                        زقاق 2
+                        دار 24</li>
+                </ul>
+                <br>
+                <p>
+                    او مكتبنا في مطار بغداد الدولي
+                </p>
+                <ul class="address">
+                    <li>
+                        مطار بغداد الدولي
+                        قرية الشحن الجوي
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="contactus">
+            <h2 id="contactus">
+                <a name="contactus">
+                    تواصل معنا
+                </a>
+            </h2>
+            <h3>هواتف العمل</h3>
+            <ul class="phones">
+                <li>+964 770 280 9044</li>
+                <li>+964 782 080 9044</li>
+            </ul>
+            <h3>البريد الالكتروني</h3>
+            <ul class="phones">
+                <li>
+                    <a href="mailto:info@mh-logistic.com" id="email">
+                        info@mh-logistic.com</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
