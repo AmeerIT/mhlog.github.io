@@ -103,7 +103,7 @@ h1 {
   z-index: 2;
   right: 0;
   position: absolute;
-  top: 250px;
+  top: 2rem;
   box-sizing: content-box; /* So the width will be 100% + 17px */
   overflow: hidden;
 
@@ -141,7 +141,7 @@ h1 {
   height: 100vh;
   scroll-margin: inherit;
   color: var(--main-font-color);
-  width: max(70%, 750px);
+  width: max(60%, 750px);
   h1,
   h2 {
     background-color: var(--main-font-color);
@@ -281,6 +281,9 @@ form {
     h1 {
       font-size: 2rem;
     }
+    img {
+      z-index: -100;
+    }
   }
   .content {
     width: 100%;
@@ -297,13 +300,17 @@ form {
     position: absolute;
     top: 0;
     left: 0;
+    margin-bottom: 2rem;
     width: 100%;
     height: 5rem;
     h1 {
       font-size: 1.2rem;
     }
   }
+
   .content {
+    padding: 10px;
+    box-shadow: inset 0px 20px 0px var(--main-color);
     width: 100%;
     max-width: 100%;
   }

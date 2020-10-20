@@ -109,7 +109,7 @@ h1 {
   z-index: 2;
   right: 0;
   position: absolute;
-  top: 250px;
+  top: 2rem;
   box-sizing: content-box;
   /* So the width will be 100% + 17px */
   overflow: hidden;
@@ -290,6 +290,9 @@ form input[type=submit]:hover {
   }
   .menutitle h1 {
     font-size: 2rem;
+  }
+  .menutitle img {
+    z-index: -100;
   }
 
   .content {
